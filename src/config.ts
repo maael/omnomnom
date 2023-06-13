@@ -2,10 +2,10 @@ import { MainScene } from './scenes/main-scene';
 
 export const GameConfig: Phaser.Types.Core.GameConfig = {
   title: 'Parcel-Boilerplate',
-  url: 'https://github.com/digitsensitive/phaser3-typescript',
+  url: 'https://github.com/maael/omnom',
   version: '1.0',
-  width: 800,
-  height: 600,
+  width: 600,
+  height: 800,
   backgroundColor: 0x3a404d,
   type: Phaser.AUTO,
   parent: 'game',
