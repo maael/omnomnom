@@ -1,1 +1,0 @@
-{"version":3,"sources":["styles/css/style.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"style.1949f02e.css","sourceRoot":"..","sourcesContent":["body {\n  background-color: #282c34;\n  color: #abb2bf;\n}\n\n#game {\n  display: flex;\n}\n\ncanvas {\n  margin: 0 auto;\n}\n"]}
