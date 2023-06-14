@@ -12,7 +12,9 @@ export class Coin extends Phaser.GameObjects.Image {
     this.initSprite();
     this.initPhysics({ velocity: aParams.velocity });
 
-    const particles = this.scene.add.particles('goldParticle');
+    const particle =
+      aParams.texture === 'coin' ? 'goldParticle' : 'redParticle';
+    const particles = this.scene.add.particles(particle);
     this.emitter = particles.createEmitter({
       speed: 50,
       scale: { start: 0.3, end: 0 },
@@ -22,6 +24,9 @@ export class Coin extends Phaser.GameObjects.Image {
     const result = this.scene.add.existing(this);
 
     this.emitter.startFollow(result);
+
+    this.setDataEnabled();
+    this.data.set('type', aParams.texture);
 
     return result;
   }
