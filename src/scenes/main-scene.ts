@@ -119,6 +119,22 @@ export class MainScene extends Phaser.Scene {
       color: 'red'
     });
 
+    const fullscreen = this.add.text(0, 0, `[]`, {
+      fontSize: '16px',
+      align: 'right',
+      fixedWidth: 600,
+      color: 'white'
+    });
+
+    fullscreen.setInteractive();
+    fullscreen.on('pointerdown', () => {
+      if (this.scale.isFullscreen) {
+        this.scale.stopFullscreen();
+      } else {
+        this.scale.startFullscreen();
+      }
+    });
+
     const cat1 = this.makeChest('left', 100, 500, true);
 
     const cat2 = this.makeChest('right', 350, 500);
